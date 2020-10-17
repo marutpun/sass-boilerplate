@@ -1,0 +1,11 @@
+// Remove unit function.
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// Convert to REM unit.
+@function rem-calc($values) {
+  $value: strip-unit($values) * 1rem;
+  $rem-values: $value / 16;
+  @return $rem-values;
+}

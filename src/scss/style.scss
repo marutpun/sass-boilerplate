@@ -1,0 +1,16 @@
+// Import
+@import 'libs/unit';
+
+// Example
+$primary-color: hsl(196, 100%, 44%);
+$anchor-color: $primary-color;
+$anchor-hover-color: scale-color($anchor-color, $lightness: -14%);
+
+a {
+  color: $anchor-color;
+
+  &:hover,
+  &:focus {
+    color: $anchor-hover-color;
+  }
+}
